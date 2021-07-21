@@ -1,0 +1,3 @@
+Aqui não serão componentes comuns, mas sim ESTILOS comuns
+
+Exemplo: Se a aplicação tiver tema, faça dentro de styles themes/dark.js e light.js

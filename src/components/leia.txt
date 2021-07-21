@@ -1,0 +1,6 @@
+Aqui somente ficarão os componentes que serão utilizados mais de uma vez no projeto, para assim aproveitar e não perder tempo
+
+Porém, caso eu queria somente 1 componente que vai ser utilizado só uma vez, faço uma pasta dentro da pasta das pages, exemplo: Login/ForgotModal/index.js e styles.js, para assim ficar mais organizado
+                                                                                                                                          |
+                                                                                                                                          |
+                                                                                                                        (no caso seria modal de esqueceu a senha)
