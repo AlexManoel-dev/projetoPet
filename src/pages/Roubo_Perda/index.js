@@ -4,6 +4,14 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function(){
     return(
-        <Text>Roubo/Perda</Text>
+        <View>
+            <Text>Roubo/Perda</Text>
+            <StatusBar
+                hidden={false}
+                backgroundColor='#fff'
+                translucent={false}
+                networkActivityIndicatorVisible={true} 
+            />
+        </View>
     )
 }

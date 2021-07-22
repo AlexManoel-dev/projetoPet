@@ -5,7 +5,7 @@ import styles from './styles'
 
 export default function(){
     return(
-        <View style={styles.container}>
+        <View>
             <View>
                 {/* Colocar imagem */}
                 <Text>Seja bem-vindo,</Text>
@@ -32,6 +32,12 @@ export default function(){
                         </View>
                     </View>
             </View>
+            <StatusBar
+                hidden={false}
+                backgroundColor='#fff'
+                translucent={false}
+                networkActivityIndicatorVisible={true} 
+            />
         </View>
     )
 }

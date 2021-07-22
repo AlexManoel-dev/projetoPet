@@ -4,6 +4,15 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function(){
     return(
-        <Text>Consulta</Text>
+        <View>
+            <Text>Consulta</Text>
+            <StatusBar
+                hidden={false}
+                backgroundColor='#fff'
+                translucent={false}
+                networkActivityIndicatorVisible={true} 
+            />
+        </View>
+        
     )
 }
