@@ -2,7 +2,10 @@ import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
     container:{
-        paddingTop: 25
+        flex: 1
+    },
+    container2:{
+        
     },
     txt:{
         fontWeight: 'bold',
@@ -24,5 +27,15 @@ export default StyleSheet.create({
         width: 150,
         borderRadius: 20,
         marginTop: 3,
+    },
+    viewNoticias:{
+        marginBottom: 20
+    },
+    views:{
+        display: 'flex', 
+        flexDirection:'row',
+        marginRight: 20,
+        marginLeft: 20,
+        justifyContent: 'space-around'
     }
 })

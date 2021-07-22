@@ -5,32 +5,32 @@ import styles from './styles'
 
 export default function(){
     return(
-        <View>
+        <View style={styles.container}>
             <View>
                 {/* Colocar imagem */}
                 <Text>Seja bem-vindo,</Text>
                 <Text style={styles.txt}>Confira as novidades!</Text>
 
-                <View>
+                <View style={styles.viewNoticias}>
                     <Text>Notícias</Text>
                     <View style={styles.noticias}></View>
                 </View>
 
-                <View>
+                <View style={styles.views}> 
                     <View>
                         <Text>Perdidos/Roubados</Text>
                         <View style={styles.viewsFinais}>
 
                         </View>
                     </View>
+                    
                     <View>
-
-                    </View>
                         <Text>Localizados</Text>
                         <View style={styles.viewsFinais}>
 
                         </View>
                     </View>
+                </View>
             </View>
             <StatusBar
                 hidden={false}

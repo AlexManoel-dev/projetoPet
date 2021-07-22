@@ -10,6 +10,7 @@ import Noticias from './pages/Noticias/index'
 import Roubo_Perda from './pages/Roubo_Perda/index'
 import Mais from './pages/Mais/index'
 
+
 const Stack = createStackNavigator()
 const Windows = createBottomTabNavigator()
 
