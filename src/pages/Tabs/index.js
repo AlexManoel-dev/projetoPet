@@ -5,19 +5,19 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 // Telas
-import Home from './pages/Home/index'
-import Consulta from './pages/Consulta/index'
-import Noticias from './pages/Noticias/index'
-import Roubo_Perda from './pages/Roubo_Perda/index'
-import Mais from './pages/Mais/index'
-
+import Home from '../Home/index'
+import Consulta from '../Consulta/index'
+import Noticias from '../Noticias/index'
+import Roubo_Perda from '../Roubo_Perda/index'
+import Mais from '../Mais/index'
 
 const Stack = createStackNavigator()
 const Windows = createBottomTabNavigator()
 
 export default function(){
     return(
-        <Windows.Navigator
+      <NavigationContainer>
+          <Windows.Navigator
                  screenOptions={({ route }) => ({
                     tabBarIcon: ({ focused, color, size }) => {
                       let iconName;
@@ -49,7 +49,8 @@ export default function(){
                         marginBottom: 10, 
                         marginLeft: 10, 
                         marginRight: 10
-                    }
+                    },
+                    keyboardHidesTabBar: true
                   }}
             >
                 <Windows.Screen
@@ -73,5 +74,6 @@ export default function(){
                     component={Mais}
                 />           
             </Windows.Navigator>
+      </NavigationContainer>
     )
 }

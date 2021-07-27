@@ -23,7 +23,7 @@ export default StyleSheet.create({
     text: {
         fontSize: 20,
         color: '#e6e6e6',
-        marginBottom: 7
+        marginBottom: 7,
     },
     box: {
         flex: 1,
@@ -32,7 +32,7 @@ export default StyleSheet.create({
         justifyContent: 'center',
     },
     buttonLogin: {
-        backgroundColor: '#ffe000',
+        backgroundColor: '#00BFFF',
         height: 60,
         width: '80%',
         margin: 7,

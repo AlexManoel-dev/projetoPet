@@ -32,6 +32,9 @@ import styles from './styles'
 //   }
 // }
 
+import Tabs from '../Tabs/index'
+import { NavigationContainer } from '@react-navigation/native'
+
 export default function Login() {
 
   const [isFocused, setIsFocused] = useState(false);
@@ -57,13 +60,13 @@ export default function Login() {
     <View style={styles.container}>
       <View style={styles.box}>
         <Text style={styles.text}>Faça o seu login</Text>
-        <View style={[styles.sectionInput, { borderColor: isFocusedBorder ? '#FCD809' : '#181818'}]}
+        <View style={[styles.sectionInput, { borderColor: isFocusedBorder ? '#00BFFF' : '#181818'}]}
         onFocus={handleViewFocus}>
           <MaterialCommunityIcons
             style={styles.inputIcon}
             name="email-outline"
             size={24}
-            color={isFocused ? '#FCD809' : '#c1bccc'}
+            color={isFocused ? '#00BFFF' : '#c1bccc'}
           />
           <TextInput
             style={styles.textInput}
@@ -78,13 +81,13 @@ export default function Login() {
             }}
           />
         </View>
-        <View style={[styles.sectionInput, { borderColor: isFocusedBorder ? '#FCD809' : '#181818'}]}
+        <View style={[styles.sectionInput, { borderColor: isFocusedBorder ? '#00BFFF' : '#181818'}]}
         onFocus={handleViewFocus}>
           <MaterialCommunityIcons
             style={styles.inputIcon}
             name="lock-outline"
             size={24}
-            color={isFocused ? '#FCD809' : '#c1bccc'}
+            color={isFocused ? '#00BFFF' : '#c1bccc'}
           />
           <TextInput
             style={styles.textInput}

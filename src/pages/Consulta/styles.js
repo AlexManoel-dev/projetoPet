@@ -9,10 +9,11 @@ export default StyleSheet.create({
     container2:{
         borderWidth: 1,
         borderColor: 'black',
-        height: 200,
+        height: 240,
         marginTop: 20,
         marginRight: 20,
-        borderRadius: 20
+        borderRadius: 20,
+        padding: 15
     },
     txt:{
         fontWeight: 'bold',
@@ -29,7 +30,7 @@ export default StyleSheet.create({
     },
     pesquisa:{
         flexDirection: 'row',
-        display: 'flex'
+        display: 'flex',
     },
     btnPesquisa:{
         justifyContent: 'center',
@@ -37,12 +38,31 @@ export default StyleSheet.create({
         marginTop: 10
     },
     btnOutros:{
-        borderWidth: 1,
-        borderColor: 'black',
-        width: 250
+        borderRadius: 10,
+        width: 250,
+        flexDirection: 'row',
+        display: 'flex',
+        alignItems: 'center',
+        marginTop: 10
+    },
+    iconeOutros:{
+        marginLeft: 10
     },
     outros:{
         flexDirection: 'row',
         display: 'flex',
+    },
+    imgPet:{
+        width: 100,
+        height: 100
+    },
+    dadosPet:{
+        width: 220,
+        position: 'absolute',
+        marginLeft: 130,
+        marginTop: 15
+    },
+    txtPet:{
+        fontSize: 13
     }
 })
