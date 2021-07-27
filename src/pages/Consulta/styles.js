@@ -3,7 +3,16 @@ import { StyleSheet } from 'react-native'
 export default StyleSheet.create({
     container:{
         flex: 1,
-        paddingLeft: 15
+        padding: 15,
+        backgroundColor: 'white'
+    },
+    container2:{
+        borderWidth: 1,
+        borderColor: 'black',
+        height: 200,
+        marginTop: 20,
+        marginRight: 20,
+        borderRadius: 20
     },
     txt:{
         fontWeight: 'bold',
@@ -24,6 +33,16 @@ export default StyleSheet.create({
     },
     btnPesquisa:{
         justifyContent: 'center',
-        marginLeft: 10
+        marginLeft: 10,
+        marginTop: 10
+    },
+    btnOutros:{
+        borderWidth: 1,
+        borderColor: 'black',
+        width: 250
+    },
+    outros:{
+        flexDirection: 'row',
+        display: 'flex',
     }
 })

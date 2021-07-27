@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
@@ -15,12 +15,9 @@ import Mais from './pages/Mais/index'
 const Stack = createStackNavigator()
 const Windows = createBottomTabNavigator()
 
-const imgHome = './assets/home.png'
-
 export default function(){
     return(
-        <NavigationContainer>
-            <Windows.Navigator
+        <Windows.Navigator
                  screenOptions={({ route }) => ({
                     tabBarIcon: ({ focused, color, size }) => {
                       let iconName;
@@ -76,6 +73,5 @@ export default function(){
                     component={Mais}
                 />           
             </Windows.Navigator>
-        </NavigationContainer>
     )
 }
