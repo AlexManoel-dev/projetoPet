@@ -1,5 +1,6 @@
+import { StatusBar } from 'expo-status-bar';
 import React, { useState, useCallback } from 'react'
-import { View, TextInput, Text, TouchableOpacity, Alert } from 'react-native'
+import { View, TextInput, Text, TouchableOpacity, Alert, Modal } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import styles from './styles'
 import { useNavigation } from '@react-navigation/core'
@@ -129,6 +130,13 @@ export default function Login() {
         <Text style={styles.textButtonSignUp}>Cadastre-se</Text>
       </TouchableOpacity>
     </View>
+
+    <StatusBar
+      hidden={false}
+      backgroundColor='#fff'
+      translucent={false}
+      networkActivityIndicatorVisible={true} 
+    />
   </View>
   );
 }

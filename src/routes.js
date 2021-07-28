@@ -12,6 +12,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 // import Mais from './pages/Mais/index'
 import Login from './pages/Login/index'
 import Tabs from '../src/pages/Tabs/index'
+import Cadastro from '../src/pages/Cadastro/index'
 
 
 const Stack = createStackNavigator()
@@ -25,6 +26,10 @@ export default function(){
                     name='Login'
                     component={Login}
                 />    
+                <Stack.Screen
+                    name='Cadastro'
+                    component={Cadastro}
+                />  
                 <Stack.Screen
                     name='Tabs'
                     component={Tabs}

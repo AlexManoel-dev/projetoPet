@@ -26,6 +26,7 @@ export default function(){
     const [idade,setIdade] = useState('2 anos')
     const [cor,setCor] = useState('Preto/Branco/Caramelo')
     const [porte,setPorte] = useState('Grande')
+    const [img,setImg] = useState()
 
     return(
         <View style={styles.container}>
