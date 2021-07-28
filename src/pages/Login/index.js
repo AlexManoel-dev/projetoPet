@@ -1,22 +1,10 @@
 import React, { useState, useCallback } from 'react'
 import { View, TextInput, Text, TouchableOpacity } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
+import styles from './styles'
+
 // import AsyncStorage from '@react-native-async-storage/async-storage'
 // import axios from "axios"
-
-import styles from './styles'
-// import Navbar from '../Navbar/';
-// import api from '../../services/api'
-// import auth from '../../contexts/auth';
-
-//  Ao abrir o aplicativo esta será a primeira tela apresentada para o usuário.
-//  Nela ele poderá realizar o login na sua conta, inserindo os seus dados utilizados no cadastro,
-//  ou criar uma conta nova, clicando no botão cadastre-se, que o levará para a tela de cadastro.    email-outline   lock-outline  login-variant
-
-
-
-// const [email, setEmail] = useState(null);
-// const [senha, setSenha] = useState(null);
 
 // async function handleSubmit() {
 //   try {
@@ -32,10 +20,10 @@ import styles from './styles'
 //   }
 // }
 
-import Tabs from '../Tabs/index'
-import { NavigationContainer } from '@react-navigation/native'
+export default function Login({navigation}) {
 
-export default function Login() {
+  const [email,setEmail] = useState('')
+  const [senha,setSenha] = useState('')
 
   const [isFocused, setIsFocused] = useState(false);
   const [isFocusedBorder, setIsFocusedBorder] = useState(false);
@@ -72,9 +60,9 @@ export default function Login() {
             style={styles.textInput}
             placeholder='E-mail'
             placeholderTextColor='#e6e6e6'
-            onChangeText={value => setEmail(value)}
+            onChangeText={value => setEmail(email)}
             onFocus={handleInputFocus}
-            onChangeText={value => setEmail(value)}
+            // onChangeText={value => setEmail(value)}
             onBlur={() => {
               handleBlur('email')
               handleInputBlur()
@@ -90,10 +78,12 @@ export default function Login() {
             color={isFocused ? '#00BFFF' : '#c1bccc'}
           />
           <TextInput
+            autoCorrect={false}
+            secureTextEntry={true}
             style={styles.textInput}
             placeholder='Senha'
             placeholderTextColor='#e6e6e6'
-            onChangeText={value => setSenha(value)}
+            onChangeText={value => setSenha(senha)}
             onFocus={handleViewFocus}
             onBlur={() => {
               handleBlur('email')
@@ -102,7 +92,7 @@ export default function Login() {
           />
         </View>
         <TouchableOpacity style={styles.buttonLogin}
-          onPress={() => handleSubmit()}
+          onPress={() => navigation.navigate('Tabs')}
         >
           <Text style={styles.textButtonLogin}>Entrar</Text>
         </TouchableOpacity>

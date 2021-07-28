@@ -16,7 +16,6 @@ const Windows = createBottomTabNavigator()
 
 export default function(){
     return(
-      <NavigationContainer>
           <Windows.Navigator
                  screenOptions={({ route }) => ({
                     tabBarIcon: ({ focused, color, size }) => {
@@ -73,7 +72,6 @@ export default function(){
                     name='Mais'
                     component={Mais}
                 />           
-            </Windows.Navigator>
-      </NavigationContainer>
+            </Windows.Navigator>     
     )
 }
