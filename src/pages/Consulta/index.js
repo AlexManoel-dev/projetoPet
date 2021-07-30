@@ -55,21 +55,23 @@ export default function(){
                                 require('../../../assets/icon.png')
                             } 
                             />
-                            <Text style={styles.txtPet, {marginTop: 10}}>
-                                Status: {status}
-                            </Text>
-                            <Text style={styles.txtPet}>
-                                Proprietário: {proprietario}
-                            </Text>
-                            <Text style={styles.txtPet}>
-                                E-mail: {email}
-                            </Text>
-                            <Text style={styles.txtPet}>
-                                Cel: {cel}
-                            </Text>
-                            <Text style={styles.txtPet}>
-                                Data da Aquisição: {data}
-                            </Text>
+                            <View style={styles.dadosDono}>
+                                <Text style={styles.txtPet}>
+                                    Status: {status}
+                                </Text>
+                                <Text style={styles.txtPet}>
+                                    Proprietário: {proprietario}
+                                </Text>
+                                <Text style={styles.txtPet}>
+                                    E-mail: {email}
+                                </Text>
+                                <Text style={styles.txtPet}>
+                                    Cel: {cel}
+                                </Text>
+                                <Text style={styles.txtPet}>
+                                    Data da Aquisição: {data}
+                                </Text>
+                            </View>
                             <View style={styles.dadosPet}>
                                 <Text style={styles.txtPet}>
                                     Nome do Pet: {nomePet}

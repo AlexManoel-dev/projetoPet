@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
     container:{
@@ -13,7 +14,7 @@ export default StyleSheet.create({
         marginTop: 20,
         marginRight: 20,
         borderRadius: 20,
-        padding: 15
+        padding: 15,
     },
     txt:{
         fontWeight: 'bold',
@@ -57,12 +58,18 @@ export default StyleSheet.create({
         height: 100
     },
     dadosPet:{
-        width: 220,
+        width: wp('53%'),
+        height: hp('14%'),
         position: 'absolute',
-        marginLeft: 130,
+        marginLeft: 120,
         marginTop: 15
     },
     txtPet:{
         fontSize: 13
+    },
+    dadosDono:{
+        width: wp('78%'),
+        height: hp('15%'),
+        marginTop: 10
     }
 })

@@ -17,7 +17,7 @@ export default function(){
                 </View>
 
                 <View style={styles.views}> 
-                    <View>
+                    <View style={styles.responsiveBox}>
                         <Text>Perdidos/Roubados</Text>
                         <View style={styles.viewsFinais}>
 

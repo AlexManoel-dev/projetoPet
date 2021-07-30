@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
     container:{
@@ -25,8 +26,8 @@ export default StyleSheet.create({
     viewsFinais:{
         borderWidth: 1,
         borderColor: 'black',
-        height: 150,
-        width: 150,
+        width: wp('35%'),
+        height: hp('22%'),
         borderRadius: 20,
         marginTop: 3,
     },
@@ -38,6 +39,6 @@ export default StyleSheet.create({
         flexDirection:'row',
         marginRight: 20,
         marginLeft: 20,
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
     }
 })
