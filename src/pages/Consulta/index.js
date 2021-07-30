@@ -1,16 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-
-import { 
-    Text, 
-    View, 
-    TextInput, 
-    TouchableOpacity, 
-    Image 
-} from 'react-native';
-
+import { Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/core'
 import styles from './styles'
 import Icon from 'react-native-vector-icons/Ionicons';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function(){
 
@@ -27,6 +21,12 @@ export default function(){
     const [cor,setCor] = useState('Preto/Branco/Caramelo')
     const [porte,setPorte] = useState('Grande')
     const [img,setImg] = useState()
+
+    const navigation = useNavigation()
+
+    function transferencia(){
+        navigation.navigate('Transferencia')
+    }
 
     return(
         <View style={styles.container}>
@@ -93,7 +93,7 @@ export default function(){
                     <View style={styles.outros}>
                         <TouchableOpacity 
                             style={styles.btnOutros} 
-                            onPress={!ativado ? ()=>{setAtivado(true), alert('Pesquisando')} : ()=>{setAtivado(false)}}
+                            onPress={ /*transferencia()*/ !ativado ? ()=>{setAtivado(true), alert('Pesquisando')} : ()=>{setAtivado(false)}}
                         >
                             <Text>Outros Pets deste Proprietário</Text>
                             <Icon name="arrow-redo-sharp" size={35} color="#999" style={styles.iconeOutros}/>

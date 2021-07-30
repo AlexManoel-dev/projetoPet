@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react'
-import { View, Text, Image, TextInput } from 'react-native'
+import { View, Text, Image, TextInput, ScrollView } from 'react-native'
 import { TextInputMask } from 'react-native-masked-text'
 import styles from './styles'
 
@@ -12,7 +12,7 @@ export default function(){
     const [img,setImg] = useState()
 
     return(
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Text style={styles.titulo}>Cadastro</Text>
             <View style={styles.fotoUsuario}>
                 <Image
@@ -54,6 +54,6 @@ export default function(){
             translucent={false}
             networkActivityIndicatorVisible={true} 
         />
-        </View>
+        </ScrollView>
     )
 }

@@ -43,7 +43,13 @@ export default function Login() {
   }
 
   function onSubmit(){
-    alert(`Logado com sucesso com o email - ${email} e a senha - ${senha}`)
+    Alert.alert(
+      'Seja bem-vindo',
+      'Logado com sucesso!',
+      [
+        {text: 'OK'}
+      ]
+    )
     home()
   }
 

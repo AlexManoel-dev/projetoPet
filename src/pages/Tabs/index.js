@@ -43,12 +43,6 @@ export default function(){
                   tabBarOptions={{
                     activeTintColor: 'black',
                     inactiveTintColor: 'gray',
-                    style:{
-                        borderRadius: 23, 
-                        marginBottom: 10, 
-                        marginLeft: 10, 
-                        marginRight: 10
-                    },
                     keyboardHidesTabBar: true
                   }}
             >

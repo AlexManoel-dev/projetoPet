@@ -10,6 +10,7 @@ export default StyleSheet.create({
     container2:{
         borderWidth: 1,
         borderColor: 'black',
+        width: wp('90%'),
         height: 240,
         marginTop: 20,
         marginRight: 20,
@@ -65,7 +66,7 @@ export default StyleSheet.create({
         marginTop: 15
     },
     txtPet:{
-        fontSize: 13
+        fontSize: 13,
     },
     dadosDono:{
         width: wp('78%'),

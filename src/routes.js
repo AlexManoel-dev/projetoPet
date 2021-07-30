@@ -13,6 +13,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Login from './pages/Login/index'
 import Tabs from '../src/pages/Tabs/index'
 import Cadastro from '../src/pages/Cadastro/index'
+import Transferencia from '../src/pages/Transferencia/index'
 
 
 const Stack = createStackNavigator()
@@ -33,6 +34,10 @@ export default function(){
                 <Stack.Screen
                     name='Tabs'
                     component={Tabs}
+                />
+                <Stack.Screen
+                    name='Transferencia'
+                    component={Transferencia}
                 />
             </Stack.Navigator>
         </NavigationContainer>
