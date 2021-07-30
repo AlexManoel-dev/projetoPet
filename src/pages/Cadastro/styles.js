@@ -38,7 +38,7 @@ export default StyleSheet.create({
         padding: 5,
         marginBottom: 10,
     },
-    inputRg:{
+    inputMenor:{
         width: '45%',
         height: 40,
         backgroundColor: '#DDD',
@@ -47,6 +47,10 @@ export default StyleSheet.create({
         padding: 5,
         marginBottom: 10,
         marginRight: 10
+    },
+    inputsMenores:{
+        flexDirection: 'row', 
+        alignItems: 'center'
     },
     fotoUsuario:{
         alignItems: 'center',

@@ -7,8 +7,10 @@ import styles from './styles'
 export default function(){
 
     const [nome,setNome] = useState('')
+    const [rg,setRg] = useState('')
     const [cpf,setCpf] = useState('')
-    const [cell,setCell] = useState('')
+    const [telefone,setTelefone] = useState('')
+    const [data,setData] = useState()
     const [img,setImg] = useState()
 
     return(
@@ -27,13 +29,13 @@ export default function(){
                     value={nome}
                     onChangeText={text => setNome(text)}
                 />
-                <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <View style={styles.inputsMenores}>
                     <TextInputMask
                         placeholder='RG'
-                        style={styles.inputRg}
+                        style={styles.inputMenor}
                         type={'cnpj'}
-                        value={cpf}
-                        onChangeText={text => setCpf(text)}
+                        value={rg}
+                        onChangeText={text => setRg(text)}
                     />
                     <TextInputMask
                         placeholder='CPF'
@@ -41,6 +43,22 @@ export default function(){
                         type={'cpf'}
                         value={cpf}
                         onChangeText={text => setCpf(text)}
+                    />
+                </View>
+                <View style={styles.inputsMenores}>
+                    <TextInputMask
+                        placeholder='Telefone'
+                        style={styles.inputMenor}
+                        type={'cel-phone'}
+                        value={telefone}
+                        onChangeText={text => setTelefone(text)}
+                    />
+                    <TextInputMask
+                        placeholder='Dt. Nasc'
+                        style={styles.input}
+                        type={'datetime'}
+                        value={data}
+                        onChangeText={text => setData(text)}
                     />
                 </View>
             </View>
