@@ -56,7 +56,7 @@ export default function Login() {
   return (
     <View style={styles.container}>
     <View style={styles.box}>
-      <Text style={styles.text}>Faça o seu login</Text>
+      {/* <Text style={styles.text}>Faça o seu login</Text> */}
       <View style={[styles.sectionInput, { borderColor: isFocusedBorder ? '#00BFFF' : '#181818'}]} onFocus={handleViewFocus}>
         <MaterialCommunityIcons
           style={styles.inputIcon}
@@ -134,6 +134,12 @@ export default function Login() {
         }}
         >
         <Text style={styles.textButtonSignUp}>Cadastre-se</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.buttonForgotPassword}
+      >
+        <Text style={styles.textButtonForgotPassword}>Esqueceu sua senha?</Text>
       </TouchableOpacity>
     </View>
 

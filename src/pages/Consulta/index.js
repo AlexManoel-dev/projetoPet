@@ -14,7 +14,7 @@ export default function(){
     const [proprietario,setProprietario] = useState('Alex Vinicius de Souza Manoel')
     const [email,setEmail] = useState('alexmanoel93@gmail.com')
     const [cel,setCel] = useState('(19) 99352-1344')
-    const [data,setData] = useState('27/27/2021')
+    const [data,setData] = useState('27/07/2021')
     const [nomePet,setNomePet] = useState('Beethoven')
     const [raca,setRaca] = useState('Boladeiro de Berna')
     const [idade,setIdade] = useState('2 anos')

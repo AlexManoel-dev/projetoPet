@@ -40,19 +40,29 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    buttonSignUp: {
-        height: 60,
-        width: '80%',
-        alignItems: 'center',
-        justifyContent: 'center',
-        margin: 12,
-    },
     textButtonLogin: {
         fontWeight: 'bold',
         fontSize: 17,
         color: '#262626'
     },
+    buttonSignUp: {
+        height: 60,
+        width: '80%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
     textButtonSignUp: {
+        fontWeight: 'bold',
+        fontSize: 17,
+        color: '#e6e6e6',
+    },
+    buttonForgotPassword: {
+        height: 60,
+        width: '80%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    textButtonForgotPassword: {
         fontWeight: 'bold',
         fontSize: 17,
         color: '#e6e6e6',
