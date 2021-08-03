@@ -1,11 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+// import DatePicker from 'react-native-datepicker'
 import styles from './styles'
 
 export default function(){
 
     const [detalhes,setDetalhes] = useState('')
+    const [data,setData] = useState('')
 
     const [ativado,setAtivado] = useState(false)
 
