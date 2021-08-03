@@ -1,17 +1,53 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import styles from './styles'
 
 export default function(){
+
+    const [detalhes,setDetalhes] = useState('')
+
+    const [ativado,setAtivado] = useState(false)
+
     return(
         <View style={styles.container}>
             <Text style={styles.titulo}>Alerta de Roubo ou Perda</Text>
             <Text style={{fontSize: 16}}>Selecione o Pet:</Text>
 
-            <ScrollView style={styles.pets}>
+            {/* Tentar com ScrollView depois, porque está dando errado */}
+            <View style={styles.pets}>
 
-            </ScrollView>
+            </View>
+
+            <View style={styles.teste}>
+                <Text>Clique no mapa o local da ocorrência:</Text>
+                <View style={styles.mapa}>
+
+                </View>
+            </View>
+
+            <View style={styles.detalhes}>
+                <Text>Descreva detalhes da ocorrência:</Text>
+                <TextInput
+                    style={styles.detalhesInput}
+                    placeholder={'Digite aqui os detalhes da ocorrência'}
+                    value={detalhes}
+                    onChangeText={text => setDetalhes(text)}
+                />
+            </View>
+
+            <View style={styles.rodape}>
+                <View style={styles.data}>
+
+                </View>
+
+                <TouchableOpacity
+                    style={styles.btnEnviar}
+                    onPress={!ativado ? ()=>{setAtivado(true), alert('Enviando...')} : ()=>{setAtivado(false)}}
+                >
+                    <Text style={{fontSize: 15, fontWeight: 'bold'}}>ENVIAR ALERTA</Text>
+                </TouchableOpacity>
+            </View>
 
             <StatusBar
                 hidden={false}
