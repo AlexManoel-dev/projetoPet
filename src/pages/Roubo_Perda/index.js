@@ -12,14 +12,14 @@ export default function(){
     const [ativado,setAtivado] = useState(false)
 
     return(
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Text style={styles.titulo}>Alerta de Roubo ou Perda</Text>
             <Text style={{fontSize: 16}}>Selecione o Pet:</Text>
 
             {/* Tentar com ScrollView depois, porque está dando errado */}
-            <View style={styles.pets}>
+            <ScrollView style={styles.pets}>
 
-            </View>
+            </ScrollView>
 
             <View style={styles.teste}>
                 <Text>Clique no mapa o local da ocorrência:</Text>
@@ -57,6 +57,6 @@ export default function(){
                 translucent={false}
                 networkActivityIndicatorVisible={true} 
             />
-        </View>
+        </ScrollView>
     )
 }

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 // import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-// import { createDrawerNavigator } from '@react-navigation/drawer'
+import { createDrawerNavigator } from '@react-navigation/drawer'
 // import Icon from 'react-native-vector-icons/Ionicons'
 
 // Telas
@@ -15,10 +15,10 @@ import Login from './pages/Login/index'
 import Tabs from '../src/pages/Tabs/index'
 import Cadastro from '../src/pages/Cadastro/index'
 import Transferencia from '../src/pages/Transferencia/index'
-
+import DrawerContent from '../src/pages/Drawer/index'
 
 const Stack = createStackNavigator()
-// const Drawer = createDrawerNavigator()
+const Drawer = createDrawerNavigator()
 // const Windows = createBottomTabNavigator()
 
 export default function(){
