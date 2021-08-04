@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Routes from './src/routes'
 import Tabs from './src/pages/Tabs/index'
 import Login from './src/pages/Login/index'
+import Transferencia from './src/pages/Transferencia/index'
 
 export default function App() {
   return (

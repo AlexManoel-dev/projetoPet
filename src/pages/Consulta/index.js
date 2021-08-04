@@ -93,7 +93,9 @@ export default function(){
                     <View style={styles.outros}>
                         <TouchableOpacity 
                             style={styles.btnOutros} 
-                            onPress={ /*transferencia()*/ !ativado ? ()=>{setAtivado(true), alert('Pesquisando...')} : ()=>{setAtivado(false)}}
+                            onPress={()=>{
+                                transferencia()
+                            }}
                         >
                             <Text>Outros Pets deste Proprietário</Text>
                             <Icon name="arrow-redo-sharp" size={35} color="#999" style={styles.iconeOutros}/>
