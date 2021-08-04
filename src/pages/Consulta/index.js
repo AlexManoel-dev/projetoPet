@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/core'
 import styles from './styles'
 import Icon from 'react-native-vector-icons/Ionicons';
 import { NavigationContainer } from '@react-navigation/native';
+import outrosPets from '../outrosPets';
 
 export default function(){
 
@@ -24,8 +25,8 @@ export default function(){
 
     const navigation = useNavigation()
 
-    function transferencia(){
-        navigation.navigate('Transferencia')
+    function outrosPets(){
+        navigation.navigate('outrosPets')
     }
 
     return(
@@ -94,7 +95,7 @@ export default function(){
                         <TouchableOpacity 
                             style={styles.btnOutros} 
                             onPress={()=>{
-                                transferencia()
+                                outrosPets()
                             }}
                         >
                             <Text>Outros Pets deste Proprietário</Text>

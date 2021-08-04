@@ -14,7 +14,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 import Login from './pages/Login/index'
 import Tabs from '../src/pages/Tabs/index'
 import Cadastro from '../src/pages/Cadastro/index'
-import Transferencia from '../src/pages/Transferencia/index'
+import outrosPets from '../src/pages/outrosPets/index'
 import DrawerContent from '../src/pages/Drawer/index'
 
 const Stack = createStackNavigator()
@@ -38,8 +38,8 @@ export default function(){
                     component={Tabs}
                 />
                 <Stack.Screen
-                    name='Transferencia'
-                    component={Transferencia}
+                    name='outrosPets'
+                    component={outrosPets}
                 />
             </Stack.Navigator>
         </NavigationContainer>
