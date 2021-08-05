@@ -31,13 +31,13 @@ export default function(){
         <View style={styles.container}>
             <Text style={{fontSize: 30, fontWeight: 'bold'}}>Pets</Text>
 
-            <ScrollView style={styles.pets}>
+            <View style={styles.pets}>
                 <FlatList
                     data={produtos}
                     keyExtractor={item=>item.id}
                     renderItem={({item}) => <View style={styles.item}><Text style={styles.prod}>Descrição: {item.desc[0]} - Valor: {item.desc[1]}</Text></View>}
                 />
-            </ScrollView>
+            </View>
 
 
 

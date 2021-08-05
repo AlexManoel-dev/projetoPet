@@ -13,7 +13,9 @@ export default StyleSheet.create({
         borderColor: 'black',
         borderRadius: 13,
         width: wp('92.5%'),
-        height: hp('30%')
+        height: hp('85%'),
+        paddingRight: 6,
+        // height: hp('30%')
     },
     item: {
         borderWidth: 1,

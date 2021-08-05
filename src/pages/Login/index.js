@@ -4,6 +4,8 @@ import { View, TextInput, Text, TouchableOpacity, Alert, Modal } from 'react-nat
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import styles from './styles'
 import { useNavigation } from '@react-navigation/core'
+// import Modal from '../../components/Modal/index'
+import Icon from 'react-native-vector-icons/Ionicons'
 // import AsyncStorage from '@react-native-async-storage/async-storage'
 // import axios from "axios"
 
@@ -29,6 +31,8 @@ export default function Login() {
 
   const [isFocused, setIsFocused] = useState(false);
   const [isFocusedBorder, setIsFocusedBorder] = useState(false);
+
+  const [esqueceuSenha,setEsqueceuSenha] = useState(false)
 
   const handleViewFocus = useCallback(() => {
     setIsFocusedBorder(true);
@@ -138,10 +142,32 @@ export default function Login() {
 
       <TouchableOpacity
         style={styles.buttonForgotPassword}
+        onPress={()=>{
+          setEsqueceuSenha(true)
+        }}
       >
         <Text style={styles.textButtonForgotPassword}>Esqueceu sua senha?</Text>
       </TouchableOpacity>
     </View>
+
+    
+    {/* <Modal esqueceuSenha={esqueceuSenha} setEsqueceuSenha={setEsqueceuSenha}/> */}
+
+    <Modal
+            animationType='slide'
+            transparent={false}
+            visible={esqueceuSenha}
+        >
+      <View>
+        <TouchableOpacity
+          onPress={()=>{
+            setEsqueceuSenha(false)
+          }}
+        >
+          <Icon name="close-outline" size={60}/>
+        </TouchableOpacity>
+      </View>
+    </Modal>
 
     <StatusBar
       hidden={false}

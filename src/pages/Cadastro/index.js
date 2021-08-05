@@ -2,7 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react'
 import { View, Text, Image, TextInput, ScrollView, TouchableOpacity, Picker } from 'react-native'
 import { TextInputMask } from 'react-native-masked-text'
+import { useNavigation } from '@react-navigation/core'
 import styles from './styles'
+import api from '../../services/api'
 
 export default function(){
 
@@ -23,6 +25,29 @@ export default function(){
 
     const [alterar,setAlterar] = useState(false)
     const [confirmar,setConfirmar] = useState(false)
+    const [action,setAction] = useState('cadastrar')
+
+    const navigation = useNavigation()
+
+    function handleStart() {
+        navigation.navigate('Login');
+      }
+
+    var myData = {
+        "action": action, 
+        "email": email, 
+        "nome": nome, 
+        "telefone": telefone, 
+        "complemento": complemento
+    }
+
+    function onSubmit(){
+        api.post('/template/usuario_json', { 
+            myData
+         })
+            alert(myData)
+            handleStart()
+    }
 
     return(
         <ScrollView style={styles.container}>
@@ -159,9 +184,12 @@ export default function(){
 
                 <TouchableOpacity 
                     style={styles.btnCadastro}
-                    onPress={
-                        !confirmar ? ()=>{setConfirmar(true), alert('Cadastrando...')} : ()=>{setConfirmar(false)
-                    }}                   
+                    // onPress={
+                    //     !confirmar ? ()=>{setConfirmar(true), alert('Cadastrando...')} : ()=>{setConfirmar(false)
+                    // }}                   
+                    onPress={() =>{
+                        onSubmit()
+                    }}
                 >
                     <Text style={styles.txtBtn}>Confirmar</Text>
                 </TouchableOpacity>
